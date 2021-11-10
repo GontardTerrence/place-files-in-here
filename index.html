@@ -1,135 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-  <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-  <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
   <script src="js/index.js"></script>
   <script src="cordova.js"></script>
 </head>
-    <body>
-        <ons-navigator id="myNavigator" page="page1.html" swipeable swipe-target-width="80px"></ons-navigator>
-        <template id="page1.html">
-        <ons-page id="page1">
-            <ons-toolbar>
-                <div class="center" style="margin: 10px auto;"></div>
-            </ons-toolbar>
-<!--            <div class="background"></div>-->
-<!--                <style>-->
-<!--                    .background{-->
-<!--                        background-color: #4B946A;-->
-<!--                    }-->
-<!--                </style>-->
-            <ons-list-item>
-            <ons-toolbar>
-                <div class="center" >Test template2</div>
-                <div class="right">
-                    <ons-button modifier="quiet" onclick="myToast.toggle()">
-                    <ons-icon icon="md-menu"></ons-icon>
-                    </ons-button>
-                    </div>
-                <div class="left">
-                <div id="deviceready" class="blink" style= "width: 160px; ">
-                    <p class="event listening">Connecting to Device</p>
-                    <p class="event received" >Device is Ready</p>
-                </div>
-                </div>
-            </ons-toolbar>
-            </ons-list-item>
-                    <ons-list-item>
-                        <ons-button id="push-button">Push page</ons-button>
-                    </ons-list-item>
-<!---->
-<!--                  <ons-list-item style="margin: 10px auto;">-->
-<!--                      <ons-button  position="center" id = "cameraTakePicture">TAKE PICTURE</ons-button>-->
-<!--                    -->
-<!--                      -->
-<!--                  </ons-list-item>-->
-                  <ons-list-item >
-                      <img style="width: 200px; height: 200px; margin: 10px auto;" id= "myImage"></img>
-                      
-                  </ons-list-item>
-                  <ons-list-item>
-                      <ons-button style="margin: 10px auto;" id="openBrowser" ripple >Open Browser</ons-button>
-                  </ons-list-item>
-                  
-                 <ons-speed-dial position="bottom right" direction="up">
-                     
-                     <ons-fab>
-                       <ons-icon icon="md-menu"></ons-icon>
-                     </ons-fab>
-                     <ons-speed-dial-item>
-                         <ons-button id="changeColor">
-                         <ons-icon spin icon="fa-cog"></ons-icon>
-                         </ons-button>
-                     </ons-speed-dial-item>
-                     <ons-speed-dial-item>
-                           <ons-button id="cameraTakePicture" ripple>
-                               <ons-icon icon="md-car"></ons-icon>
-                           </ons-button>
-                     </ons-speed-dial-item>
-                 </ons-speed-dial>
-                 
-            </ons-page>
-        </template>
-        <template id="page2.html">
-       <ons-page>
-           <ons-toolbar>
-               <div class="center" style="margin: 10px auto;"></div>
-           </ons-toolbar>
-           <ons-list-item>
-           <ons-toolbar>
-                 <div class="left"><ons-back-button>Page 1</ons-back-button></div>
-                 <div class="center"></div>
-               </ons-toolbar>
-           
-           </ons-list-item>
-           <ons-list>
-               <ons-list-header>Switches</ons-list-header>
-                     <ons-list-item>
-                       <label class="center" for="switch1">
-                         Switch<span id="switch-status">&nbsp;(on)</span>
-                       </label>
-                       <div class="right">
-                         <ons-switch id="model-switch" input-id="switch1" checked="true"></ons-switch>
-                       </div>
-                     </ons-list-item>
-                     <ons-list-item>
-                       <label id="enabled-label" class="center" for="switch2">
-                         Enabled switch
-                       </label>
-                       <div class="right">
-                         <ons-switch id="disabled-switch" input-id="switch2"></ons-switch>
-                       </div>
-                     </ons-list-item>
-             </ons-list>
-           <script>
-               document.getElementById('model-switch').addEventListener('change', function (event) {
-                        if (event.value) {
-                          document.getElementById('switch-status').innerHTML = `&nbsp;(on)`;
-                          document.getElementById('enabled-label').innerHTML = `Enabled switch`;
-                          document.getElementById('disabled-switch').disabled = false;
-                        } else {
-                          document.getElementById('switch-status').innerHTML = `&nbsp;(off)`;
-                          document.getElementById('enabled-label').innerHTML = `Disabled switch`;
-                          document.getElementById('disabled-switch').disabled = true;
-                        }
-               });
-            </script>
-           <ons-fab position="bottom right">
-             <ons-icon icon="md-menu"></ons-icon>
-           </ons-fab>
-       </ons-page>
-        </template>
-        <ons-toast id="myToast" animation="ascend">
-          FABs up!
-          <button onclick="myToast.hide()">ok</button>
-          
-        </ons-toast>
+<body>
+    <ons-page>
+        <ons-toolbar>
+         <div class="center">Test_3</div>
+        </ons-toolbar>
+        <ons-button id="changeColor">change color</ons-button>
+        <ons-switch id="switch-1" ></ons-switch>
         
-    </body>
+<!--        <div class="background"></div>-->
+<!--        <style>-->
+<!--            .background{-->
+<!--                background-color: #4B946A;-->
+<!--            }-->
+<!--        </style>-->
+  <ons-button onclick="myToast.toggle()">Click Me</ons-button>
+  
+  <ons-toast id="myToast" animation="none" class="background">
+      <style>
+          .background{
+              background-color: #4B946A;
+          }
+      </style>
+     
+
+    <button onclick="myToast.hide()">ok</button>
+    </ons-toast>
+    </ons-page>
+    
+    <script>
+       
+    </script>
+</body>
 </html>
