@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="cordova.js"></script>
+</head>
+    <body>
+        <ons-page>
+            
+            <ons-toolbar>
+                <div class="center">Test template</div>
+            </ons-toolbar>
+                
+                    <ons-list-item>
+                        <div id="deviceready" class="blink">
+                            <p class="event listening">Connecting to Device</p>
+                            <p class="event received">Device is Ready</p>
+                        </div>
+                    </ons-list-item>
+
+                  <ons-list-item style="margin: 10px auto;">
+<!--                      <ons-button  position="center" id = "cameraTakePicture">TAKE PICTURE</ons-button>-->
+<!--                      -->
+<!--                      <ons-button style="margin: 10px auto;" id = "cameraTakePicture">TAKE PICTURE</ons-button>-->
+                      
+                  </ons-list-item>
+                  <ons-list-item>
+<!--                      <img style="width: 200px; height: 200px; margin: 10px auto;" id= "myImage"></img>-->
+                      
+                  </ons-list-item>
+                 
+                 <ons-speed-dial position="bottom right" direction="up">
+                     
+                     <ons-fab>
+                       <ons-icon icon="md-menu"></ons-icon>
+                     </ons-fab>
+                     <ons-speed-dial-item id="dialItem">
+                           <ons-button id="cameraTakePicture" ripple>
+                               <ons-icon icon="md-car"></ons-icon>
+                           </ons-button>
+                     </ons-speed-dial-item>
+                    
+                 </ons-speed-dial>
+                 <img style="width: 200px; height: 200px; margin: 10px auto;" id= "myImage"></img>
+            </ons-page>
+        <ons-toast id="myToast" animation="ascend">
+          FABs up!
+          <button onclick="myToast.hide()">ok</button>
+        </ons-toast>
+    </body>
+</html>
