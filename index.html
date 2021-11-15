@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+   
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
   <script src="js/index.js"></script>
   <script src="cordova.js"></script>
 </head>
-<body>
-    <ons-page>
+<body>= $0
+    <ons-page id="page1">
         <ons-toolbar>
          <div class="center">Test_3</div>
         </ons-toolbar>
-        <ons-button id="changeColor">change color</ons-button>
+        
+        
+        <form name="form1">
+        <input type="text" name="bgfarbe" size="10">
+        <ons-button onClick="farbegreen()" >rgb change</ons-button>
+        </form>
+        
+        
+        <div class="left">
+        <div id="deviceready" class="blink" style= "width: 160px; ">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received" >Device is Ready</p>
+        </div>
+        </div>
+        <ons-list-item>
+        <ons-button id="changeColor" <div class="background"></div>
+            <style>
+                .background{
+                    background-color: #4B946A;
+                }
+            </style>>change color</ons-button>
+        </ons-list-item>
         <ons-switch id="switch-1" ></ons-switch>
         
 <!--        <div class="background"></div>-->
@@ -21,22 +45,24 @@
 <!--                background-color: #4B946A;-->
 <!--            }-->
 <!--        </style>-->
-  <ons-button onclick="myToast.toggle()">Click Me</ons-button>
+        
+  <ons-button onclick="myToast.toggle()" >change color with toast</ons-button>
   
-  <ons-toast id="myToast" animation="none" class="background">
-      <style>
-          .background{
-              background-color: #4B946A;
-          }
-      </style>
-     
-
-    <button onclick="myToast.hide()">ok</button>
-    </ons-toast>
+  <form name="form2">
+  <input type="text" name="farbfeld" size="10">
+      <ons-button onClick="eingabefarbe()">change1</ons-button>
+  </form>
+  
     </ons-page>
+    <ons-toast id="myToast" animation="none" <div class="background"></div>
+        <style>
+            .background{
+                background-color: #4B946A;
+            }
+        </style>>
+        
+      <button onclick="myToast.hide()">ok</button>
+      </ons-toast>
     
-    <script>
-       
-    </script>
 </body>
 </html>
