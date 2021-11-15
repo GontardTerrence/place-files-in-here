@@ -27,6 +27,8 @@ function onDeviceReady() {
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
     document.getElementById("changeColor").addEventListener("click", changeColor);
+    document.getElementById("changeColor").addEventListener("click", eingabefarbe);
+    document.getElementById("changeColor").addEventListener("click", farbegreen);
 }
 function changeColor() {
     console.log("color changed")
@@ -36,3 +38,17 @@ function changeColor() {
 }
 window.addEventListener = {};
 window.addEventListener("load",function() { changeColor('red') });
+
+function farbegreen() {
+document.bgColor = "#4B946A";
+document.getElementsByTagName("body")[0].style.backgroundColor = document.bgColor;
+document.form1.bgfarbe.value = document.bgColor;
+}
+function eingabefarbe() {
+    console.log("color changed");
+
+document.getElementsByTagName("body")[0].style.backgroundColor=document.form2.farbfeld.value;
+console.log(document.getElementsByTagName("body")[0].style.backgroundColor=document.form2.farbfeld.value);
+document.form1.bgfarbe.value=document.getElementsByTagName("body")[0].style.backgroundColor;
+}
+
