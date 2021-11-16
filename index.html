@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
@@ -13,14 +13,20 @@
 <body>= $0
     <ons-page id="page1">
         <ons-toolbar>
-         <div class="center">Test_3</div>
+         <div class="center"></div>
         </ons-toolbar>
+        <ons-list-item>
+        <ons-toolbar>
+         <div class="center" id="test3">Test_3</div>
+        </ons-toolbar>
+        </ons-list-item>
         
         
-        <form name="form1">
-        <input type="text" name="bgfarbe" size="10">
-        <ons-button onClick="farbegreen()" >rgb change</ons-button>
-        </form>
+<!--        <form name="form1">-->
+<!--        <input type="text" name="bgfarbe" size="10">-->
+<!--        <ons-button onClick="farbegreen()" >rgb change</ons-button>-->
+<!--        </form>-->
+        <div class="page__background"></div>
         
         
         <div class="left">
@@ -30,12 +36,12 @@
         </div>
         </div>
         <ons-list-item>
-        <ons-button id="changeColor" <div class="background"></div>
-            <style>
-                .background{
-                    background-color: #4B946A;
-                }
-            </style>>change color</ons-button>
+<!--        <ons-button id="changeColor" <div class="background"></div>-->
+<!--            <style>-->
+<!--                .background{-->
+<!--                    background-color: #4B946A;-->
+<!--                }-->
+<!--            </style>change color</ons-button>-->
         </ons-list-item>
         <ons-switch id="switch-1" ></ons-switch>
         
@@ -46,21 +52,34 @@
 <!--            }-->
 <!--        </style>-->
         
-  <ons-button onclick="myToast.toggle()" >change color with toast</ons-button>
-  
+<!--  <ons-button onclick="myToast.toggle()" >change color with toast</ons-button>-->
+<ons-row name="hans">
+      <ons-col width="40px" style="text-align: center; line-height: 31px;">
+        <ons-icon icon="md-volume-down"></ons-icon>
+      </ons-col>
+      <ons-col>
+        <ons-range name="opac" style="width: 100%;" value="25" id="range"></ons-range>
+      </ons-col>
+      <ons-col width="40px" style="text-align: center; line-height: 31px;">
+        <ons-icon icon="md-volume-up"></ons-icon>
+      </ons-col>
+    </ons-row>
   <form name="form2">
-  <input type="text" name="farbfeld" size="10">
-      <ons-button onClick="eingabefarbe()">change1</ons-button>
+      <ons-list>
+  <ons-select  name="farbfeld" size="10" style="background: #ffffff">
+      
+      <option Value="#4B946A">Dark Green</option>
+      <option Value="#0000FF">Blue</option>
+      <option Value="#FFE600">Yellow</option>
+      <option Value="#ff0000">red</option>
+    </ons-select>
+      </ons-list>
+
+      <ons-button onClick="eingabefarbe()">change color</ons-button>
   </form>
   
     </ons-page>
-    <ons-toast id="myToast" animation="none" <div class="background"></div>
-        <style>
-            .background{
-                background-color: #4B946A;
-            }
-        </style>>
-        
+    <ons-toast id="myToast" animation="none">
       <button onclick="myToast.hide()">ok</button>
       </ons-toast>
     
