@@ -27,28 +27,37 @@ function onDeviceReady() {
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
     document.getElementById("changeColor").addEventListener("click", changeColor);
-    document.getElementById("changeColor").addEventListener("click", eingabefarbe);
-    document.getElementById("changeColor").addEventListener("click", farbegreen);
+   document.getElementById("range").addEventListener("onchange", range);
+//    document.getElementById("changeColor").addEventListener("click", farbegreen);
 }
 function changeColor() {
-    console.log("color changed")
-    document.body.style.background = '#4B946A';
-    $('body').css('background', '#ccc');
-
+    console.log(document.page1.backgroundColor);
+//    document.body.style.background = '#4B946A';
+//   document.getElementById("page1")
+//    document.body.background = background-color: #4B946A;
+    if(target.id == "page1")
+        {
+          $("#page1 .page__background").css("background-color", "#4B946A");
+        }
 }
-window.addEventListener = {};
-window.addEventListener("load",function() { changeColor('red') });
+//window.addEventListener = {};
+//window.addEventListener("load",function() { changeColor('red') });
 
-function farbegreen() {
-document.bgColor = "#4B946A";
-document.getElementsByTagName("body")[0].style.backgroundColor = document.bgColor;
-document.form1.bgfarbe.value = document.bgColor;
-}
+//function farbegreen() {
+//document.bgColor = "#4B946A";
+//document.getElementsByClassName("page__background").style.backgroundColor = document.bgColor;
+//document.form1.bgfarbe.value = document.bgColor;
+//}
+
 function eingabefarbe() {
     console.log("color changed");
-
-document.getElementsByTagName("body")[0].style.backgroundColor=document.form2.farbfeld.value;
-console.log(document.getElementsByTagName("body")[0].style.backgroundColor=document.form2.farbfeld.value);
-document.form1.bgfarbe.value=document.getElementsByTagName("body")[0].style.backgroundColor;
+    var elements = document.getElementsByClassName('page__background'); // get all elements
+        for(var i = 0; i < elements.length; i++){
+            elements[i].style.backgroundColor = document.form2.farbfeld.value;
+        }
+    document.getElementById("test3").style.backgroundColor=document.form2.farbfeld.value;
+document.getElementsByClassName("page__background").style.backgroundColor=document.form2.farbfeld.value;
+console.log(document.getElementsByClassName("page__background").style.backgroundColor=document.form2.farbfeld.value);
+    document.getElementsByClassName("page__background").style.opacity=document.hans.opac.value;
+//document.form1.bgfarbe.value=document.getElementsByTagName("body")[0].style.backgroundColor;
 }
-
